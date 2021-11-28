@@ -1,6 +1,0 @@
-Export the desired products from /catalogue
-run getInfo.js replacing the filtered file by the recently exported
-The links.json file will be updated, use it to fetch the product images
-run the fetchArticles.js from the browser
-With the downloaded file, run the buildProducts.js
-Export index

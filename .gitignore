@@ -8,8 +8,8 @@
 # testing
 /coverage
 
-banners
-done
+/banners
+/done
 publish
 
 # next.js
