@@ -8,9 +8,9 @@
 # testing
 /coverage
 
-/banners
-/done
-/publish
+banners
+done
+publish
 
 # next.js
 /.next/
