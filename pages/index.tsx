@@ -9,7 +9,7 @@ import React from 'react';
 
 interface Product {
   images: string[];
-  name: string[];
+  name: string;
   price: number;
   store: string;
   link: string;
@@ -23,7 +23,7 @@ export default function Home() {
   React.useEffect(() => {
     document.addEventListener('keydown', (ev) => {
       if (ev.key === 'Escape') {
-        const name = document.getElementById('Name');
+        const name = document.getElementById('Name') as HTMLInputElement;
         name.scrollIntoView();
         name.value = '';
         name.focus();
