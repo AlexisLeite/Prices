@@ -2,6 +2,13 @@ const fs = require('fs');
 
 console.log('Reading files');
 
+function replaceAll(s, search, replace) {
+  while (s.match(search)) {
+    s = s.replace(search, replace);
+  }
+  return s;
+}
+
 const products = [
   ...JSON.parse(fs.readFileSync('./pages/api/cdrprices.json')).map((product) => ({
     ...product,
@@ -40,12 +47,12 @@ Return value:
 export default function search(req, res) {
   let resultProducts = products;
   if (req.query.name) {
-    const firstQuery = new RegExp(`${req.query.name.toLowerCase().replaceAll(' ', '')}`);
+    const firstQuery = new RegExp(`${replaceAll(req.query.name.toLowerCase(), ' ', '')}`);
     resultProducts = products.filter((product) => {
       if (!('name' in product)) {
         console.log(product);
       }
-      return product.name.toLowerCase().replaceAll(' ', '').match(firstQuery);
+      return replaceAll(product.name.toLowerCase(), ' ', '').match(firstQuery);
     });
     /* 
     const secondQuery = new RegExp(`${req.query.name.toLowerCase().replace(' ', '')}`);
@@ -55,11 +62,11 @@ export default function search(req, res) {
         resultProducts.find((el) => el.code === product.code) === undefined
     ); */
     const thirdQuery = new RegExp(
-      `${req.query.name.toLowerCase().replaceAll(' ', '').replace(' ', '.*')}`
+      `${replaceAll(req.query.name.toLowerCase(), ' ', '').replace(' ', '.*')}`
     );
     const thirdResult = products.filter((product) => {
       return (
-        product.name.toLowerCase().replaceAll(' ', '').match(thirdQuery) &&
+        replaceAll(product.name.toLowerCase(), ' ', '').match(thirdQuery) &&
         resultProducts.find((el) => {
           return el.code === product.code;
         }) === undefined
