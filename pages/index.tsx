@@ -40,9 +40,7 @@ export default function Home() {
           const min = (document.getElementById('Min') as HTMLInputElement).value ?? 0;
           const max = (document.getElementById('Max') as HTMLInputElement).value ?? 8100000;
 
-          const response = await fetch(
-            `http://localhost:3000/api/prices/?name=${name}&priceup=${max}&pricedown=${min}`
-          );
+          const response = await fetch(`/api/prices/?name=${name}&priceup=${max}&pricedown=${min}`);
           const results: Product[] = await response.json();
 
           setProducts(results.sort((a, b) => a.price - b.price));
