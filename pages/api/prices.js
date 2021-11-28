@@ -3,15 +3,15 @@ const fs = require('fs');
 console.log('Reading files');
 
 const products = [
-  ...JSON.parse(fs.readFileSync('./pages/api/pricesServer/cdrprices.json')).map((product) => ({
+  ...JSON.parse(fs.readFileSync('./pages/api/cdrprices.json')).map((product) => ({
     ...product,
     store: 'cdr',
   })),
-  ...JSON.parse(fs.readFileSync('./pages/api/pricesServer/toptecnoprices.json')).map((product) => ({
+  ...JSON.parse(fs.readFileSync('./pages/api/toptecnoprices.json')).map((product) => ({
     ...product,
     store: 'toptecno',
   })),
-  ...JSON.parse(fs.readFileSync('./pages/api/pricesServer/feboprices.json')).map((product, i) => ({
+  ...JSON.parse(fs.readFileSync('./pages/api/feboprices.json')).map((product, i) => ({
     ...product,
     store: 'febo',
     code: `FEBO${i}`,
