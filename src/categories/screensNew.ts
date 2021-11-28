@@ -1,0 +1,3 @@
+export const screensNew = JSON.parse(
+  `[{\"title\":\"Monitores nuevos\",\"products\":[],\"paginated\":[[{\"title\":\"Monitor LED LG 19.5 HD\",\"cost\":167.994,\"image\":\"https://www.cdrmedios.com/imgs/productos/productos13_20030.jpg\",\"code\":\"MON174\"},{\"title\":\"Monitor LED IPS LG 21.5 HDMI\",\"cost\":217.404,\"image\":\"https://www.cdrmedios.com/imgs/productos/productos13_25486.jpg\",\"code\":\"MON216\"},{\"title\":\"Monitor Gamer AOC Full HD 24 1ms 144Hz\",\"cost\":327.75300000000004,\"image\":\"https://www.cdrmedios.com/imgs/productos/productos13_25821.jpg\",\"code\":\"MON218\"}]]}]`
+);

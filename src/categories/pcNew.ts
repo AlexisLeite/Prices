@@ -1,0 +1,3 @@
+export const pcNew =
+  JSON.parse(`[{\"title\":\"PC de escritorio nuevas\",\"products\":[],\"paginated\":[[{\"title\":\"Equipo HP Dualcore 3.1GHz, 4GB, 500GB, DVDRW,  Win 10\",\"cost\":377.163,\"image\":\"https://www.cdrmedios.com/imgs/productos/productos13_25152.jpg\",\"code\":\"EQU825\"},{\"title\":\"Equipo Apple Mac mini Core i5 4.1GHz 8GB 256GB Space Gray\",\"cost\":1431.2430000000002,\"image\":\"https://www.cdrmedios.com/imgs/productos/productos13_24060.jpg\",\"code\":\"EQU826\"},{\"title\":\"Servidor Lenovo ThinkSystem SR250\",\"cost\":2025.81,\"image\":\"https://www.cdrmedios.com/imgs/productos/productos13_25794.jpg\",\"code\":\"SER18\"}]]}]
+`);
