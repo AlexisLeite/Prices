@@ -10,15 +10,15 @@ function replaceAll(s, search, replace) {
 }
 
 const products = [
-  ...JSON.parse(fs.readFileSync('./cdrprices.json')).map((product) => ({
+  ...JSON.parse(fs.readFileSync(process.cwd() + '/cdrprices.json')).map((product) => ({
     ...product,
     store: 'cdr',
   })),
-  ...JSON.parse(fs.readFileSync('./toptecnoprices.json')).map((product) => ({
+  ...JSON.parse(fs.readFileSync(process.cwd() + '/toptecnoprices.json')).map((product) => ({
     ...product,
     store: 'toptecno',
   })),
-  ...JSON.parse(fs.readFileSync('./feboprices.json')).map((product, i) => ({
+  ...JSON.parse(fs.readFileSync(process.cwd() + '/feboprices.json')).map((product, i) => ({
     ...product,
     store: 'febo',
     code: `FEBO${i}`,
