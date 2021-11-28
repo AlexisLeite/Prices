@@ -14,7 +14,7 @@ interface Product {
   store: string;
   link: string;
   code: string;
-}
+} //Comm
 
 export default function Home() {
   const [products, setProducts] = React.useState<Product[]>([]);
