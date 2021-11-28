@@ -50,7 +50,9 @@ export default function Home() {
       >
         <HStack>
           <InputGroup>
-            <InputLeftElement pointerEvents="none" children={<SearchIcon color="gray.300" />} />
+            <InputLeftElement pointerEvents="none">
+              <SearchIcon color="gray.300" />{' '}
+            </InputLeftElement>
             <Input type="tel" placeholder="Nombre del producto..." id="Name" />
           </InputGroup>
           <InputGroup w="200px">
