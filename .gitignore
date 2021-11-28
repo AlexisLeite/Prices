@@ -11,6 +11,7 @@
 /banners
 /done
 publish
+pricesServer
 
 # next.js
 /.next/
